@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".PostActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profilePic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginVertical="15dp"
+        android:layout_marginStart="10dp"
+        app:cardCornerRadius="75dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/ppiv"
+            android:scaleType="centerCrop"
+            android:src="@drawable/yellow" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/accountNameTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/name"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/profilePic"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        />
+
+    <TextView
+        android:id="@+id/timePostedTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/_2_hrs"
+        android:textColor="#A62B2D30"
+        app:layout_constraintLeft_toRightOf="@id/profilePic"
+        app:layout_constraintTop_toBottomOf="@id/accountNameTV" />
+
+    <TextView
+        android:id="@+id/dotTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/dot"
+        android:textColor="#A62B2D30"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/timePostedTV"
+        app:layout_constraintTop_toBottomOf="@id/accountNameTV" />
+
+    <ImageView
+        android:id="@+id/globeIV"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginVertical="6dp"
+        android:layout_marginStart="3dp"
+        android:contentDescription="@string/globe"
+        android:src="@drawable/globe"
+        app:layout_constraintLeft_toRightOf="@id/dotTV"
+        app:layout_constraintTop_toBottomOf="@id/accountNameTV" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:paddingVertical="7dp"
+        android:text="@string/options"
+        android:textColor="#383434"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/captionTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/caption"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profilePic" />
+
+    <TextView
+        android:id="@+id/linkTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="2dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/http_unblast_com_color_schemes"
+        android:textColor="@color/linkColor"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/captionTV" />
+
+    <ImageView
+        android:id="@+id/photoIV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="10dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/postphoto"
+        android:src="@drawable/yellow"
+        app:layout_constraintTop_toBottomOf="@id/linkTV" />
+
+    <ImageView
+        android:id="@+id/likeIV"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginVertical="11dp"
+        android:layout_marginStart="10dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/like"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photoIV" />
+
+    <TextView
+        android:id="@+id/reactsTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="11dp"
+        android:layout_marginStart="3dp"
+        android:text="@string/_12"
+        android:textColor="#A62B2D30"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/likeIV"
+        app:layout_constraintTop_toBottomOf="@id/photoIV" />
+
+    <ImageView
+        android:id="@+id/dropListIV"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginVertical="15dp"
+        android:layout_marginEnd="10dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/droplist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photoIV" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dropListIcon"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="2dp"
+        android:layout_marginVertical="12dp"
+        app:cardCornerRadius="75dp"
+        app:layout_constraintEnd_toStartOf="@id/dropListIV"
+        app:layout_constraintTop_toBottomOf="@id/photoIV"
+
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/yellow" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/_1_share"
+        app:layout_constraintEnd_toStartOf="@id/dropListIcon"
+        app:layout_constraintTop_toBottomOf="@id/photoIV" />
+
+    <TextView
+        android:id="@+id/spacer"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="15dp"
+        android:background="#80D1D0D0"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/likeIV" />
+
+    <ImageView
+        android:id="@+id/likeButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginVertical="8dp"
+        android:src="@drawable/likebutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spacer" />
+
+    <TextView
+        android:id="@+id/likeString"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="9dp"
+        android:text="@string/like"
+        app:layout_constraintStart_toEndOf="@id/likeButton"
+        app:layout_constraintTop_toBottomOf="@id/spacer" />
+
+    <ImageView
+        android:id="@+id/commentButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="70dp"
+        android:src="@drawable/comment"
+        app:layout_constraintStart_toEndOf="@id/likeString"
+        app:layout_constraintTop_toBottomOf="@id/spacer" />
+
+    <TextView
+        android:id="@+id/commentString"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="9dp"
+        android:text="@string/comment"
+        app:layout_constraintStart_toEndOf="@id/commentButton"
+        app:layout_constraintTop_toBottomOf="@id/spacer" />
+
+    <ImageView
+        android:id="@+id/shareButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="70dp"
+        android:src="@drawable/share"
+        app:layout_constraintStart_toEndOf="@id/commentString"
+        app:layout_constraintTop_toBottomOf="@id/spacer" />
+
+    <TextView
+        android:id="@+id/shareString"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="9dp"
+        android:text="@string/share"
+        app:layout_constraintStart_toEndOf="@id/shareButton"
+        app:layout_constraintTop_toBottomOf="@id/spacer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
